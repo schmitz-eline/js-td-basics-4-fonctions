@@ -23,3 +23,11 @@ les trois MOYENS DE COMMUNICATION d'une fonction avec le reste du code :
 	  (rendre une info disponible partout)
   - Le PASSAGE DE PARAMÈTRE pour FAIRE ENTRER UNE DONNÉE DANS UNE FONCTION
 */
+
+function direBonjour(prenom) {
+    const message = `Bonjour ${prenom} !`
+    console.log(message);
+    return message;
+}
+direBonjour("Baptiste");
+direBonjour("Sophie");
