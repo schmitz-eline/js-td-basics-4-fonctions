@@ -9,7 +9,11 @@
 2. À l'intérieur de la fonction, calculez l'âge de la personne en soustrayant birthYear de l'année courante.
 3. Utilisez un return pour renvoyer l'âge calculé.
 */
-
+const calculateAge = birthYear => {
+    const age = 2024 - birthYear;
+    console.log(`Âge : ${age} ans`);
+    return age;
+}
 
 /*
 Utilisez la fonction calculateAge que vous venez de créer pour calculer
@@ -18,7 +22,9 @@ Utilisez la fonction calculateAge que vous venez de créer pour calculer
 	- l'âge de Jane (née en 1969)
 4. Affichez ces âges dans la console.
 */
-
+calculateAge(1990);
+calculateAge(1948);
+calculateAge(1969);
 
 // 2. Fonction avec deux paramètres et un return
 
@@ -36,7 +42,19 @@ Utilisez la fonction calculateAge que vous venez de créer pour calculer
 	- Jane (née en 1969)
 */
 
+const giveYearsUntilRetirement = (year, firstName) => {
+    const age = calculateAge(year);
+    const retirement = 65 - age;
+    if (retirement > 0) {
+        console.log(`${firstName} prendra sa pension dans ${retirement} ans`);
+    } else {
+        console.log(`${firstName} est déjà pensionné(e)`);
+    }
+    return retirement;
+}
 
+console.log("//////////");
 
-
-
+giveYearsUntilRetirement(1990, "John");
+giveYearsUntilRetirement(1948, "Mark");
+giveYearsUntilRetirement(1969, "Jane");

@@ -13,7 +13,27 @@ Aide : votre fonction s'exécute avec le pattern suivant : calculer(nb1, "+", nb
 */
 
 // Déclaration de la fonction calculer
-
+function calculer(n1, signe, n2) {
+    let operation = `${n1} ${signe} ${n2} = ${n1+n2}`
+    switch(signe) {
+        case "+":
+            console.log(operation);
+            break;
+        case "-":
+            console.log(operation);
+            break;
+        case "*":
+            console.log(operation);
+            break;
+        case "/":
+            console.log(operation);
+            break;
+    }
+    return operation;
+}
 
 // Utilisation de la fonction calculer
-
+calculer(4, "+", 6);
+calculer(4, "-", 6);
+calculer(2, "*", 0);
+calculer(12, "/", 0);

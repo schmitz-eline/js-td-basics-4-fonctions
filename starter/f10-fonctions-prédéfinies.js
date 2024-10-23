@@ -19,7 +19,7 @@ console.log(Math.min(4.5, 5)); // 4.5
 console.log(Math.min(19, 9));  // 9
 console.log(Math.min(1, 1));   // 1
 
-// La fonction Math.random() génère un nombre aléatoire entre 0 et 1
+// La fonction Math.random() génère un nombre aléatoire entre 0 et 1 exclu
 
 /* EXERCICE 2 : 
 Utiliser la fonction Math.random pour afficher dans la console
@@ -28,7 +28,9 @@ Utiliser la fonction Math.random pour afficher dans la console
 - un nombre aléatoire compris entre 5 (inclus) et 15 (exclu)
 */
 
-console.log(Math.random()); // Un nombre aléatoire entre 0 et 1
+console.log(Math.random()); // Un nombre aléatoire entre 0 et 1 exclu
+console.log(Math.random()*10); // Un nombre aléatoire entre 0 et 10 exclu
+console.log(Math.random()*10+5); // Un nombre aléatoire entre 5 et 15 exclu
 
 // Nous découvrirons plein d'autres fonctions prédéfinies dans la suite de ce cours.
 
