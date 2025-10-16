@@ -10,6 +10,10 @@
 3. Utilisez un return pour renvoyer l'âge calculé.
 */
 
+function calculeAge(birthYear) {
+    const currentYear = new Date().getFullYear();
+    return currentYear - birthYear;
+}
 
 /*
 Utilisez la fonction calculateAge que vous venez de créer pour calculer
@@ -18,7 +22,9 @@ Utilisez la fonction calculateAge que vous venez de créer pour calculer
 	- l'âge de Jane (née en 1969)
 4. Affichez ces âges dans la console.
 */
-
+console.log(calculeAge(1990));
+console.log(calculeAge(1948));
+console.log(calculeAge(1969));
 
 // 2. Fonction avec deux paramètres et un return
 
@@ -36,7 +42,17 @@ Utilisez la fonction calculateAge que vous venez de créer pour calculer
 	- Jane (née en 1969)
 */
 
+function giveYearsUntilRetirement(firstName, year) {
+    const age = calculeAge(year);
+    const retirement = 65 - age;
 
+    if (retirement > 0) {
+        console.log(`${firstName} prendra sa pension dans ${retirement} ans`);
+    } else {
+        console.log(`${firstName} est déjà pensionné(e)`);
+    }
+}
 
-
-
+giveYearsUntilRetirement('John', 1990);
+giveYearsUntilRetirement('Mike', 1948);
+giveYearsUntilRetirement('Jane', 1969);

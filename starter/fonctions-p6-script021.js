@@ -12,10 +12,18 @@
    - dans tous les autres cas, "does something else"
 */
 
-const whatDoYouDo = function(job, firstName) {
-    // Utilisez des conditions (if/else if) pour décrire le job de la personne en fonction de la valeur de 'job'.
-    // Renvoyez la phrase appropriée en utilisant un return.
-};
+function whatDoYouDo(job, firstName) {
+    switch (job) {
+        case 'teacher' :
+            return `${firstName} teaches kids how to code`;
+        case 'driver' :
+            return `${firstName} drives a cab in Lisbon`;
+        case 'designer' :
+            return `${firstName} designs beautiful websites`;
+        default :
+            return `${firstName} does something else`;
+    }
+}
 
 /*
 2. Utilisez cette fonction pour afficher dans la console ce que font :
@@ -23,3 +31,7 @@ const whatDoYouDo = function(job, firstName) {
     - Jane (designer)
     - Mark (retired)
 */
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('Mark', 'retired'));

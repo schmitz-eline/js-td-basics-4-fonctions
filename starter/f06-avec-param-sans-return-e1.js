@@ -24,6 +24,11 @@
 // le nombre dont on veut calculer le double.
 */
 
+function double3() {
+    const number = 3;
+    console.log(`Le double de ${number} est ${2 * number}`);
+}
+double3();
 
 // 2°) Une fonction avec paramètre à la place de toutes celles-là :
 
@@ -36,3 +41,11 @@
                      - le double de 24 ;
                      - le double de 128.
 */
+
+function double(number) {
+    console.log(`Le double de ${number} est ${2 * number}`);
+}
+double(3);
+double(10);
+double(24);
+double(128);

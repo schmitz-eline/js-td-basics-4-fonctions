@@ -13,7 +13,23 @@ Aide : votre fonction s'exécute avec le pattern suivant : calculer(nb1, "+", nb
 */
 
 // Déclaration de la fonction calculer
-
+function calculer(a, operator, b) {
+    switch (operator) {
+        case '+' :
+            return a + b;
+        case '-' :
+            return a - b;
+        case '*' :
+            return a * b;
+        case '/' :
+            return a / b;
+        default :
+            return 'Opérateur non connu';
+    }
+}
 
 // Utilisation de la fonction calculer
-
+console.log(calculer(4, '+', 6)); // 10
+console.log(calculer(4, '-', 6)); // -2
+console.log(calculer(2, '*', 0)); // 0
+console.log(calculer(12, '/', 0)); // Infinity
